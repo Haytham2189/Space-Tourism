@@ -1,0 +1,194 @@
+/* RESET */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+/* =========================
+   ROOT VARIABLES
+========================= */
+
+:root {
+
+  /* =========================
+     COLORS
+  ========================= */
+
+  --clr-dark: #0B0D17;
+  --clr-light: #D0D6F9;
+  --clr-white: #FFFFFF;
+
+
+
+  /* =========================
+     FONT FAMILIES
+  ========================= */
+
+  --ff-heading: "Bellefair", serif;
+  --ff-body: "Barlow", sans-serif;
+  --ff-nav: "Barlow Condensed", sans-serif;
+
+
+
+  /* =========================
+     FONT SIZES
+  ========================= */
+
+  --fs-heading-xl: 9rem;        /* 144px */
+  --fs-heading-lg: 6.25rem;     /* 100px */
+  --fs-heading-md: 3.5rem;      /* 56px */
+  --fs-heading-sm: 2rem;        /* 32px */
+
+  --fs-nav-lg: 1.75rem;         /* 28px */
+  --fs-nav-md: 1rem;            /* 16px */
+  --fs-nav-sm: 0.875rem;        /* 14px */
+
+  --fs-body-lg: 1.125rem;       /* 18px */
+  --fs-body: 1rem;
+
+
+
+  /* =========================
+     FONT WEIGHTS
+  ========================= */
+
+  --fw-regular: 400;
+
+
+
+  /* =========================
+     LETTER SPACING
+  ========================= */
+
+  --ls-xl: 4px;
+  --ls-lg: 2.7px;
+  --ls-md: 2px;
+  --ls-sm: 1px;
+
+
+
+  /* =========================
+     LINE HEIGHTS
+  ========================= */
+
+  --lh-heading: 1.1;
+  --lh-body: 1.8;
+
+
+
+  /* =========================
+     SPACING SCALE
+  ========================= */
+
+  --space-1600: 8rem;     /* 128px */
+  --space-1200: 6rem;     /* 96px */
+  --space-1000: 5rem;     /* 80px */
+  --space-800: 4rem;      /* 64px */
+  --space-600: 3rem;      /* 48px */
+  --space-500: 2.5rem;    /* 40px */
+  --space-400: 2rem;      /* 32px */
+  --space-300: 1.5rem;    /* 24px */
+  --space-200: 1rem;      /* 16px */
+  --space-150: 0.75rem;   /* 12px */
+  --space-100: 0.5rem;    /* 8px */
+  --space-50: 0.25rem;    /* 4px */
+  --space-25: 0.125rem;   /* 2px */
+
+
+
+  /* =========================
+     TRANSITIONS
+  ========================= */
+
+  --transition-default: 0.3s ease;
+  --transition-fast: 0.2s ease;
+  --transition-slow: 0.5s ease;
+
+
+
+  /* =========================
+     LAYOUT
+  ========================= */
+
+  --container-width: 1110px;
+  --container-padding: 2rem;
+
+
+
+  /* =========================
+     Z-INDEX
+  ========================= */
+
+  --z-overlay: 10;
+  --z-menu: 100;
+  --z-modal: 1000;
+}
+
+/*=============================BODY==================*/
+
+body {
+  min-height: 100vh;
+  font-family: var(--ff-body);
+  color: var(--clr-white);
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  overflow-x: hidden;
+}
+/*================================Container===================*/
+.container {
+  width: min(var(--container-width), 100% - (var(--container-padding) * 2));
+  margin-inline: auto;
+}
+/*================================Utilities=============*/
+.flex {
+  display: flex;
+}
+
+.grid {
+  display: grid;
+}
+
+.hidden {
+  display: none;
+}
+
+/*=================================Background system global==============*/
+body.home {
+background-image: url(space-tourism\assets\home\background-home-desktop.jpg);
+}
+body.destination {
+    background-image:url(space-tourism\assets\destination\background-destination-desktop.jpg) ;}
+body.crew {
+    background-image: url(space-tourism\assets\crew\background-crew-desktop.jpg);
+}
+body.technology {
+    background-image: url(space-tourism\assets\technology\background-technology-desktop.jpg);
+}
