@@ -182,13 +182,37 @@ body {
 
 /*=================================Background system global==============*/
 body.home {
-background-image: url(space-tourism\assets\home\background-home-desktop.jpg);
+  background-image: url("../assets/home/background-home-desktop.jpg");
 }
 body.destination {
-    background-image:url(space-tourism\assets\destination\background-destination-desktop.jpg) ;}
+   background-image: url("../assets/destination/background-destination-desktop.jpg");
+}
 body.crew {
-    background-image: url(space-tourism\assets\crew\background-crew-desktop.jpg);
+     background-image: url("../assets/crew/background-crew-desktop.jpg");
 }
 body.technology {
     background-image: url(space-tourism\assets\technology\background-technology-desktop.jpg);
+}
+/*==================================NAVBAR=====================*/
+.navbar {
+  display: flex;
+  align-items: center;
+  padding-top: var(--space-500);
+}
+.navbar-line {
+  flex: 1;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.25);
+  margin-inline: var(--space-400);
+}
+.navbar-list {
+  display: flex;
+  align-items: center;
+  gap: var(--space-500);
+}
+.navbar-menu {
+  padding-inline: var(--space-600);
+  padding-block: var(--space-300);
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(20px);
 }
