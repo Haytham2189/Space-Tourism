@@ -70,7 +70,7 @@
   margin-bottom: 2.5rem;
 }
 
-.destination__tabs a {
+.destination__tab {
   position: relative;
 
   padding-bottom: 0.75rem;
@@ -86,7 +86,7 @@
   text-transform: uppercase;
 }
 
-.destination__tabs a::after {
+.destination__tab::after {
   content: "";
 
   position: absolute;
@@ -102,11 +102,11 @@
   transition: width 0.3s ease;
 }
 
-.destination__tabs a:hover::after {
+.destination__tab:hover::after {
   width: 100%;
 }
 
-.destination__tabs a.active::after {
+.destination__tab.active::after {
   width: 100%;
 
   background-color: var(--clr-white);
@@ -175,4 +175,236 @@
   color: var(--clr-white);
 
   text-transform: uppercase;
+}
+
+/* ==================================================
+   TABLET
+================================================== */
+
+@media (max-width: 48rem) {
+
+  .destination {
+    padding-bottom: var(--space-800);
+  }
+
+
+
+  /* =========================
+     CONTAINER
+  ========================= */
+
+  .destination__container {
+    grid-template-columns: 1fr;
+
+    justify-items: center;
+
+    gap: var(--space-600);
+
+    padding-top: var(--space-600);
+
+    text-align: center;
+  }
+
+
+
+  /* =========================
+     TITLE
+  ========================= */
+
+  .destination__title {
+    width: 100%;
+
+    margin-bottom: 0;
+
+    font-size: 1.25rem;
+
+    text-align: left;
+  }
+
+
+
+  /* =========================
+     IMAGE
+  ========================= */
+
+  .destination__image img {
+    max-width: 18.75rem;
+  }
+
+
+
+  /* =========================
+     CONTENT
+  ========================= */
+
+  .destination__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    max-width: 32rem;
+
+    padding-top: 0;
+  }
+
+
+
+  /* =========================
+     TABS
+  ========================= */
+
+  .destination__tabs {
+    justify-content: center;
+
+    margin-bottom: var(--space-400);
+  }
+
+
+
+  /* =========================
+     PLANET NAME
+  ========================= */
+
+  .destination__name {
+    font-size: 5rem;
+  }
+
+
+
+  /* =========================
+     DESCRIPTION
+  ========================= */
+
+  .destination__description {
+    max-width: 36rem;
+
+    margin-bottom: var(--space-800);
+
+    font-size: 1rem;
+  }
+
+
+
+  /* =========================
+     STATS
+  ========================= */
+
+  .destination__stats {
+    justify-content: center;
+
+    width: 100%;
+
+    gap: var(--space-800);
+  }
+}
+/* ==================================================
+   MOBILE
+================================================== */
+
+@media (max-width: 35rem) {
+
+  .destination {
+    padding-bottom: var(--space-800);
+  }
+
+
+
+  /* =========================
+     CONTAINER
+  ========================= */
+
+  .destination__container {
+    gap: var(--space-500);
+
+    padding-top: var(--space-500);
+
+    text-align: center;
+  }
+
+
+
+  /* =========================
+     TITLE
+  ========================= */
+
+  .destination__title {
+    justify-self: center;
+
+    font-size: 1rem;
+    letter-spacing: var(--ls-md);
+
+    text-align: center;
+  }
+
+
+
+  /* =========================
+     IMAGE
+  ========================= */
+
+  .destination__image img {
+    max-width: 11rem;
+  }
+
+
+
+  /* =========================
+     TABS
+  ========================= */
+
+  .destination__tabs {
+    gap: var(--space-300);
+
+    margin-bottom: var(--space-300);
+  }
+
+  .destination__tabs a {
+    font-size: 0.875rem;
+  }
+
+
+
+  /* =========================
+     PLANET NAME
+  ========================= */
+
+  .destination__name {
+    font-size: 3.5rem;
+  }
+
+
+
+  /* =========================
+     DESCRIPTION
+  ========================= */
+
+  .destination__description {
+    max-width: 100%;
+
+    margin-bottom: var(--space-600);
+
+    font-size: 0.9375rem;
+  }
+
+
+
+  /* =========================
+     STATS
+  ========================= */
+
+  .destination__stats {
+    flex-direction: column;
+    align-items: center;
+
+    gap: var(--space-400);
+  }
+
+  .destination__stat {
+    width: 100%;
+  }
+}
+.destination__tab {
+  background: none;
+  border: none;
+  cursor: pointer;
 }

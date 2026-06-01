@@ -1,0 +1,423 @@
+/* ==================================================
+   TECHNOLOGY
+================================================== */
+
+.technology {
+  min-height: 100vh;
+}
+
+
+
+/* ==================================================
+   CONTAINER
+================================================== */
+
+.technology__container {
+  width: min(100%, 79.6875rem);
+
+  margin-left: auto;
+
+  padding-top: 3rem;
+}
+
+
+
+/* ==================================================
+   TITLE
+================================================== */
+
+.technology__title {
+  margin-bottom: 5rem;
+  margin-left: 10rem;
+
+  font-family: var(--ff-barlow-condensed);
+  font-size: var(--text-preset-5);
+  font-weight: var(--fw-regular);
+  letter-spacing: var(--ls-xl);
+
+  color: var(--clr-white);
+
+  text-transform: uppercase;
+}
+
+.technology__title span {
+  margin-right: 1.5rem;
+
+  opacity: 0.25;
+
+  font-weight: var(--fw-bold);
+}
+
+
+
+/* ==================================================
+   CONTENT LAYOUT
+================================================== */
+
+.technology__content {
+  display: grid;
+  grid-template-columns:
+    auto
+    minmax(30rem, 1fr)
+    minmax(32rem, 38rem);
+
+  align-items: center;
+
+  gap: 2rem;
+
+  min-height: 45.875rem;
+}
+
+
+
+/* ==================================================
+   TABS
+================================================== */
+
+.technology__tabs {
+  display: flex;
+  flex-direction: column;
+
+  gap: 2rem;
+}
+
+.technology__tab {
+  width: 5rem;
+
+  aspect-ratio: 1;
+
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 50%;
+
+  background-color: transparent;
+
+  font-family: var(--ff-bellefair);
+  font-size: 2rem;
+  font-weight: var(--fw-regular);
+
+  color: var(--clr-white);
+
+  cursor: pointer;
+
+  transition:
+    background-color var(--transition-default),
+    border-color var(--transition-default),
+    color var(--transition-default),
+    transform var(--transition-default);
+}
+
+.technology__tab:hover {
+  border-color: var(--clr-white);
+
+  transform: scale(1.05);
+}
+
+.technology__tab.active {
+  background-color: var(--clr-white);
+
+  color: var(--clr-dark);
+}
+
+
+
+/* ==================================================
+   INFO
+================================================== */
+
+.technology__info {
+  max-width: 30.6875rem;
+}
+
+.technology__subtitle {
+  margin-bottom: 1rem;
+
+  font-family: var(--ff-bellefair);
+  font-size: 2rem;
+  font-weight: var(--fw-regular);
+  line-height: 1.15;
+
+  color: rgba(255, 255, 255, 0.5);
+
+  text-transform: uppercase;
+}
+
+.technology__name {
+  margin-bottom: 1.5rem;
+
+  font-family: var(--ff-bellefair);
+  font-size: 3.5rem;
+  font-weight: var(--fw-regular);
+  line-height: 1.15;
+
+  color: var(--clr-white);
+
+  text-transform: uppercase;
+}
+
+.technology__description {
+  font-family: var(--ff-barlow);
+  font-size: var(--text-preset-9);
+  font-weight: var(--fw-regular);
+  line-height: 1.8;
+
+  color: var(--clr-light);
+}
+
+
+
+/* ==================================================
+   IMAGE
+================================================== */
+
+.technology__image {
+  justify-self: end;
+}
+
+.technology__image picture,
+.technology__image img {
+  display: block;
+
+  width: 100%;
+}
+
+.technology__image img {
+  width: 100%;
+  max-width: 38rem;
+  height: 37.5rem;
+
+  object-fit: cover;
+}
+/* ==================================================
+   TABLET
+================================================== */
+
+@media (max-width: 48rem) {
+
+  .technology {
+    padding-bottom: var(--space-800);
+  }
+
+
+
+  /* =========================
+     CONTAINER
+  ========================= */
+
+  .technology__container {
+    width: 100%;
+
+    padding-top: 2.5rem;
+  }
+
+
+
+  /* =========================
+     TITLE
+  ========================= */
+
+  .technology__title {
+    margin-bottom: 3.75rem;
+    margin-left: 2.5rem;
+
+    font-size: 1.25rem;
+  }
+
+
+
+  /* =========================
+     CONTENT
+  ========================= */
+
+  .technology__content {
+    grid-template-columns: 1fr;
+
+    gap: 3.5rem;
+
+    min-height: auto;
+  }
+
+
+
+  /* =========================
+     IMAGE
+  ========================= */
+
+  .technology__image {
+    order: 1;
+
+    width: 100%;
+  }
+
+  .technology__image img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
+
+
+
+  /* =========================
+     TABS
+  ========================= */
+
+  .technology__tabs {
+    order: 2;
+
+    flex-direction: row;
+    justify-content: center;
+
+    gap: 1rem;
+  }
+
+  .technology__tab {
+    width: 3.75rem;
+
+    font-size: 1.5rem;
+  }
+
+
+
+  /* =========================
+     INFO
+  ========================= */
+
+  .technology__info {
+    order: 3;
+
+    max-width: 32rem;
+
+    margin-inline: auto;
+
+    text-align: center;
+  }
+
+
+
+  /* =========================
+     TYPOGRAPHY
+  ========================= */
+
+  .technology__subtitle {
+    margin-bottom: 1rem;
+
+    font-size: 1.5rem;
+  }
+
+  .technology__name {
+    margin-bottom: 1.5rem;
+
+    font-size: 2.5rem;
+  }
+
+  .technology__description {
+    font-size: 1rem;
+  }
+}
+/* ==================================================
+   MOBILE
+================================================== */
+
+@media (max-width: 35rem) {
+
+  .technology {
+    padding-bottom: var(--space-600);
+  }
+
+
+
+  /* =========================
+     CONTAINER
+  ========================= */
+
+  .technology__container {
+    padding-top: var(--space-500);
+  }
+
+
+
+  /* =========================
+     TITLE
+  ========================= */
+
+  .technology__title {
+    margin-bottom: 2rem;
+    margin-left: 0;
+
+    font-size: 1rem;
+    letter-spacing: var(--ls-md);
+
+    text-align: center;
+  }
+
+
+
+  /* =========================
+     CONTENT
+  ========================= */
+
+  .technology__content {
+    gap: 2rem;
+  }
+
+
+
+  /* =========================
+     IMAGE
+  ========================= */
+
+  .technology__image img {
+    width: 100%;
+    min-height: 10.625rem;
+
+    object-fit: cover;
+  }
+
+
+
+  /* =========================
+     TABS
+  ========================= */
+
+  .technology__tabs {
+    gap: 1rem;
+  }
+
+  .technology__tab {
+    width: 2.5rem;
+
+    font-size: 1.125rem;
+  }
+
+
+
+  /* =========================
+     INFO
+  ========================= */
+
+  .technology__info {
+    max-width: 20rem;
+  }
+
+
+
+  /* =========================
+     TYPOGRAPHY
+  ========================= */
+
+  .technology__subtitle {
+    margin-bottom: 0.5rem;
+
+    font-size: 1rem;
+  }
+
+  .technology__name {
+    margin-bottom: 1rem;
+
+    font-size: 1.5rem;
+  }
+
+  .technology__description {
+    font-size: 0.9375rem;
+    line-height: 1.8;
+  }
+}

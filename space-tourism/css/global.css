@@ -1,22 +1,26 @@
-/* RESET */
+/* ==================================================
+   RESET
+================================================== */
 
 *,
 *::before,
 *::after {
   box-sizing: border-box;
+
   margin: 0;
   padding: 0;
 }
 
 img,
 picture {
-  max-width: 100%;
   display: block;
+
+  max-width: 100%;
 }
 
 a {
-  text-decoration: none;
   color: inherit;
+  text-decoration: none;
 }
 
 ul {
@@ -29,9 +33,11 @@ textarea {
   font: inherit;
 }
 
-/* =========================
+
+
+/* ==================================================
    ROOT VARIABLES
-========================= */
+================================================== */
 
 :root {
 
@@ -49,9 +55,9 @@ textarea {
      FONT FAMILIES
   ========================= */
 
-  --ff-heading: "Bellefair", serif;
-  --ff-body: "Barlow", sans-serif;
-  --ff-nav: "Barlow Condensed", sans-serif;
+  --ff-bellefair: "Bellefair", serif;
+  --ff-barlow: "Barlow", sans-serif;
+  --ff-barlow-condensed: "Barlow Condensed", sans-serif;
 
 
 
@@ -59,16 +65,16 @@ textarea {
      FONT SIZES
   ========================= */
 
-  --fs-heading-xl: 9rem;        /* 144px */
-  --fs-heading-lg: 6.25rem;     /* 100px */
-  --fs-heading-md: 3.5rem;      /* 56px */
-  --fs-heading-sm: 2rem;        /* 32px */
+  --fs-heading-xl: 9rem;          /* 144px */
+  --fs-heading-lg: 6.25rem;       /* 100px */
+  --fs-heading-md: 3.5rem;        /* 56px */
+  --fs-heading-sm: 2rem;          /* 32px */
 
-  --fs-nav-lg: 1.75rem;         /* 28px */
-  --fs-nav-md: 1rem;            /* 16px */
-  --fs-nav-sm: 0.875rem;        /* 14px */
+  --fs-nav-lg: 1.75rem;           /* 28px */
+  --fs-nav-md: 1rem;              /* 16px */
+  --fs-nav-sm: 0.875rem;          /* 14px */
 
-  --fs-body-lg: 1.125rem;       /* 18px */
+  --fs-body-lg: 1.125rem;         /* 18px */
   --fs-body: 1rem;
 
 
@@ -78,6 +84,7 @@ textarea {
   ========================= */
 
   --fw-regular: 400;
+  --fw-bold: 700;
 
 
 
@@ -85,10 +92,10 @@ textarea {
      LETTER SPACING
   ========================= */
 
-  --ls-xl: 4px;
-  --ls-lg: 2.7px;
-  --ls-md: 2px;
-  --ls-sm: 1px;
+  --ls-xl: 0.25rem;               /* 4px */
+  --ls-lg: 0.16875rem;            /* 2.7px */
+  --ls-md: 0.125rem;              /* 2px */
+  --ls-sm: 0.0625rem;             /* 1px */
 
 
 
@@ -99,31 +106,38 @@ textarea {
   --lh-heading: 1.1;
   --lh-body: 1.8;
 
-/*============================text preset==================*/
---text-preset-2: clamp(5rem, 8vw, 6.25rem);
---text-preset-5: 1.75rem;
---text-preset-6: 1.75rem;
---text-preset-7: 0.875rem;
---text-preset-8: 1rem;
---text-preset-9: 1.125rem;
+
+
+  /* =========================
+     TEXT PRESETS
+  ========================= */
+
+  --text-preset-2: clamp(5rem, 8vw, 6.25rem);
+  --text-preset-5: 1.75rem;
+  --text-preset-6: 1.75rem;
+  --text-preset-7: 0.875rem;
+  --text-preset-8: 1rem;
+  --text-preset-9: 1.125rem;
+
+
 
   /* =========================
      SPACING SCALE
   ========================= */
 
-  --space-1600: 8rem;     /* 128px */
-  --space-1200: 6rem;     /* 96px */
-  --space-1000: 5rem;     /* 80px */
-  --space-800: 4rem;      /* 64px */
-  --space-600: 3rem;      /* 48px */
-  --space-500: 2.5rem;    /* 40px */
-  --space-400: 2rem;      /* 32px */
-  --space-300: 1.5rem;    /* 24px */
-  --space-200: 1rem;      /* 16px */
-  --space-150: 0.75rem;   /* 12px */
-  --space-100: 0.5rem;    /* 8px */
-  --space-50: 0.25rem;    /* 4px */
-  --space-25: 0.125rem;   /* 2px */
+  --space-1600: 8rem;
+  --space-1200: 6rem;
+  --space-1000: 5rem;
+  --space-800: 4rem;
+  --space-600: 3rem;
+  --space-500: 2.5rem;
+  --space-400: 2rem;
+  --space-300: 1.5rem;
+  --space-200: 1rem;
+  --space-150: 0.75rem;
+  --space-100: 0.5rem;
+  --space-50: 0.25rem;
+  --space-25: 0.125rem;
 
 
 
@@ -141,7 +155,7 @@ textarea {
      LAYOUT
   ========================= */
 
-  --container-width: 1110px;
+  --container-width: 69.375rem;
   --container-padding: 2rem;
 
 
@@ -155,11 +169,17 @@ textarea {
   --z-modal: 1000;
 }
 
-/*=============================BODY==================*/
+
+
+/* ==================================================
+   BODY
+================================================== */
 
 body {
   min-height: 100vh;
-  font-family: var(--ff-body);
+
+  font-family: var(--ff-barlow);
+
   color: var(--clr-white);
 
   background-repeat: no-repeat;
@@ -168,12 +188,28 @@ body {
 
   overflow-x: hidden;
 }
-/*================================Container===================*/
+
+
+
+/* ==================================================
+   CONTAINER
+================================================== */
+
 .container {
-  width: min(var(--container-width), 100% - (var(--container-padding) * 2));
+  width: min(
+    var(--container-width),
+    100% - (var(--container-padding) * 2)
+  );
+
   margin-inline: auto;
 }
-/*================================Utilities=============*/
+
+
+
+/* ==================================================
+   UTILITIES
+================================================== */
+
 .flex {
   display: flex;
 }
@@ -186,20 +222,38 @@ body {
   display: none;
 }
 
-/*=================================Background system global==============*/
-body.home {
+
+
+/* ==================================================
+   BACKGROUND SYSTEM
+================================================== */
+
+/* =========================
+   DESKTOP
+========================= */
+
+body.home-page {
   background-image: url("../assets/home/background-home-desktop.jpg");
 }
+
 body.destination-page {
-   background-image: url("../assets/destination/background-destination-desktop.jpg");
+  background-image: url("../assets/destination/background-destination-desktop.jpg");
 }
-body.crew {
-     background-image: url("../assets/crew/background-crew-desktop.jpg");
+
+body.crew-page {
+  background-image: url("../assets/crew/background-crew-desktop.jpg");
 }
-body.technology {
-    background-image: url(space-tourism\assets\technology\background-technology-desktop.jpg);
+
+body.technology-page {
+  background-image: url("../assets/technology/background-technology-desktop.jpg");
 }
-/*==================================NAVBAR=====================*/
+
+
+
+/* ==================================================
+   NAVBAR
+================================================== */
+
 .navbar {
   display: flex;
   align-items: center;
@@ -207,61 +261,68 @@ body.technology {
   padding-top: var(--space-500);
   padding-left: var(--space-800);
 }
+
 .navbar-line {
+  position: relative;
+  z-index: 2;
+
   flex: 1;
 
   height: 1px;
 
-  background-color: rgba(255, 255, 255, 0.25);
-
   margin-left: var(--space-800);
   margin-right: -2rem;
 
-  position: relative;
-  z-index: 2;
+  background-color: rgba(255, 255, 255, 0.25);
 }
-.navbar-list {
+
+.navbar-menu {
   display: flex;
   align-items: center;
- gap: 3rem;
-}
-.navbar-menu {
+
   margin-left: auto;
 
   height: var(--space-1200);
 
   padding-inline: 4rem;
 
+  background: rgba(255, 255, 255, 0.05);
+
+  backdrop-filter: blur(20px);
+}
+
+.navbar-list {
   display: flex;
   align-items: center;
 
-  background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(20px);
+  gap: 3rem;
 }
+
 .navbar-link {
+  position: relative;
+
   display: flex;
   align-items: center;
   gap: var(--space-150);
 
-  font-family: var(--ff-nav);
+  height: 100%;
+
+  font-family: var(--ff-barlow-condensed);
   font-size: var(--fs-nav-sm);
   letter-spacing: var(--ls-lg);
+
   text-transform: uppercase;
-
-height: 100%;
-
-display: flex;
-align-items: center;
-
-  position: relative;
 }
+
 .navbar-link span {
-  font-weight: 700;
+  font-weight: var(--fw-bold);
 }
+
 .navbar-link::after {
   content: "";
 
   position: absolute;
+
   left: 0;
   bottom: -2.375rem;
 
@@ -271,12 +332,15 @@ align-items: center;
   background-color: var(--clr-white);
 
   transform: scaleX(0);
+
   transition: transform var(--transition-default);
 }
+
 .navbar-link:hover::after,
 .navbar-link.active::after {
   transform: scaleX(1);
 }
+
 .navbar-link:hover::after {
   background-color: rgba(255, 255, 255, 0.5);
 }
@@ -285,15 +349,49 @@ align-items: center;
   background-color: var(--clr-white);
 }
 
-/*==============================Responsive==================*/
+
+
+/* ==================================================
+   MOBILE NAV CONTROLS
+================================================== */
+
 .mobile-nav-toggle {
   display: none;
 }
+
 .mobile-nav-close {
   display: none;
 }
-/*===============Tablet==========*/
-@media (max-width: 768px) {
+
+
+
+/* ==================================================
+   TABLET
+================================================== */
+
+@media (max-width: 48rem) {
+
+  /* =========================
+     BACKGROUNDS
+  ========================= */
+
+  body.home-page {
+    background-image: url("../assets/home/background-home-tablet.jpg");
+  }
+
+  body.destination-page {
+    background-image: url("../assets/destination/background-destination-tablet.jpg");
+  }
+
+  body.crew-page {
+    background-image: url("../assets/crew/background-crew-tablet.jpg");
+  }
+
+  body.technology-page {
+    background-image: url("../assets/technology/background-technology-tablet.jpg");
+  }
+
+
 
   /* =========================
      NAVBAR
@@ -308,31 +406,20 @@ align-items: center;
     display: none;
   }
 
-  .navbar-menu {
-    margin-left: auto;
+ .navbar-menu {
+  flex: 1;
 
-    height: 6rem;
+  height: 6rem;
 
-    padding-inline: var(--space-300);
+  padding-inline: var(--space-600);
+}
 
-    display: flex;
-    align-items: center;
-
-    background: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(20px);
-  }
-
-  .navbar-list {
-    gap: var(--space-300);
-  }
+ .navbar-list {
+  gap: var(--space-500);
+}
 
   .navbar-link {
-    height: 100%;
-
-    display: flex;
-    align-items: center;
-
-    font-size: 0.875rem;
+    font-size: var(--fs-nav-sm);
 
     letter-spacing: var(--ls-md);
   }
@@ -344,20 +431,34 @@ align-items: center;
   .navbar-link::after {
     bottom: -2rem;
   }
-
-
-
 }
 
-/*=================Mobile===========*/
+
+
+/* ==================================================
+   MOBILE
+================================================== */
+
 @media (max-width: 35rem) {
 
   /* =========================
-     BODY BACKGROUND
+     BACKGROUNDS
   ========================= */
 
-  body.home {
+  body.home-page {
     background-image: url("../assets/home/background-home-mobile.jpg");
+  }
+
+  body.destination-page {
+    background-image: url("../assets/destination/background-destination-mobile.jpg");
+  }
+
+  body.crew-page {
+    background-image: url("../assets/crew/background-crew-mobile.jpg");
+  }
+
+  body.technology-page {
+    background-image: url("../assets/technology/background-technology-mobile.jpg");
   }
 
 
@@ -367,57 +468,62 @@ align-items: center;
   ========================= */
 
   .navbar {
+    justify-content: space-between;
+
     padding-top: var(--space-300);
     padding-inline: var(--space-300);
-
-    justify-content: space-between;
   }
 
   .navbar-line {
     display: none;
   }
 
- .navbar-menu {
-  position: fixed;
+  .navbar-menu {
+    position: fixed;
 
-  top: 0;
-  right: 0;
+    top: 0;
+    right: 0;
 
-  width: 70%;
-  height: 100vh;
+    display: flex;
+    align-items: flex-start;
 
-  padding-top: 8rem;
-  padding-left: var(--space-400);
+    width: 70%;
+    height: 100vh;
 
-  display: flex;
-  align-items: flex-start;
+    padding-top: 8rem;
+    padding-left: var(--space-400);
 
-  background: rgba(255, 255, 255, 0.08);
+    background: rgba(255, 255, 255, 0.08);
 
-  backdrop-filter: blur(30px);
+    backdrop-filter: blur(30px);
 
-  transform: translateX(100%);
+    transform: translateX(100%);
 
-  transition: transform var(--transition-default);
+    transition: transform var(--transition-default);
 
-  z-index: var(--z-menu);
-}
+    z-index: var(--z-menu);
+  }
 
-.navbar-menu.open {
-  transform: translateX(0);
-}
-.navbar-list {
-  flex-direction: column;
-  align-items: flex-start;
+  .navbar-menu.open {
+    transform: translateX(0);
+  }
 
-  gap: var(--space-500);
-}
-.navbar-link span {
-  display: inline;
-}
-.navbar-link::after {
-  display: none;
-}
+  .navbar-list {
+    flex-direction: column;
+    align-items: flex-start;
+
+    gap: var(--space-500);
+  }
+
+  .navbar-link span {
+    display: inline;
+  }
+
+  .navbar-link::after {
+    display: none;
+  }
+
+
 
   /* =========================
      MOBILE NAV TOGGLE
@@ -435,18 +541,18 @@ align-items: center;
   .mobile-nav-toggle img {
     width: 1.5rem;
   }
+
   .mobile-nav-close {
-  position: absolute;
+    position: absolute;
 
-  top: var(--space-300);
-  right: var(--space-300);
+    top: var(--space-300);
+    right: var(--space-300);
 
-  background: transparent;
-  border: none;
+    display: block;
 
-  cursor: pointer;
-}
-.mobile-nav-close {
-  display: block;
-}
+    background: transparent;
+    border: none;
+
+    cursor: pointer;
+  }
 }

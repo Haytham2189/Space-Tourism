@@ -1,0 +1,503 @@
+/* ==================================================
+   CREW
+================================================== */
+
+.crew {
+  min-height: 100vh;
+}
+
+
+
+/* ==================================================
+   CONTAINER
+================================================== */
+
+.crew__container {
+  width: min(90%, 69.375rem);
+
+  padding-top: 3rem;
+}
+
+
+
+/* ==================================================
+   TITLE
+================================================== */
+
+.crew__title {
+  margin-bottom: 5rem;
+
+  font-family: var(--ff-barlow-condensed);
+  font-size: var(--text-preset-5);
+  font-weight: var(--fw-regular);
+  letter-spacing: var(--ls-xl);
+
+  color: var(--clr-white);
+
+  text-transform: uppercase;
+}
+
+.crew__title span {
+  margin-right: 1.5rem;
+
+  opacity: 0.25;
+
+  font-weight: var(--fw-bold);
+}
+
+
+
+/* ==================================================
+   CONTENT LAYOUT
+================================================== */
+
+.crew__content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  align-items: end;
+
+  gap: 2rem;
+
+  min-height: 49.5rem;
+}
+
+
+
+/* ==================================================
+   CREW INFO
+================================================== */
+
+.crew__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+  padding-bottom: 4.8125rem;
+}
+
+
+
+/* ==================================================
+   HEADER
+================================================== */
+
+.crew__header {
+  margin-bottom: 1.5rem;
+}
+
+.crew__role {
+  margin-bottom: 1rem;
+
+  font-family: var(--ff-bellefair);
+  font-size: 2rem;
+  font-weight: var(--fw-regular);
+  line-height: 1.15;
+
+  color: rgba(255, 255, 255, 0.5);
+
+  text-transform: uppercase;
+}
+
+.crew__name {
+  font-family: var(--ff-bellefair);
+  font-size: 3.5rem;
+  font-weight: var(--fw-regular);
+  line-height: 1.15;
+
+  color: var(--clr-white);
+
+  text-transform: uppercase;
+}
+
+
+
+/* ==================================================
+   DESCRIPTION
+================================================== */
+
+.crew__description {
+  max-width: 33.6875rem;
+
+  margin-bottom: 14.8125rem;
+
+  font-family: var(--ff-barlow);
+  font-size: var(--text-preset-9);
+  font-weight: var(--fw-regular);
+  line-height: 1.8;
+
+  color: var(--clr-light);
+}
+
+
+
+/* ==================================================
+   DOTS NAVIGATION
+================================================== */
+
+.crew__dots {
+  display: flex;
+  align-items: center;
+
+  gap: 2.5rem;
+}
+
+.crew__dot {
+  width: 0.9375rem;
+
+  aspect-ratio: 1;
+
+  border: none;
+  border-radius: 50%;
+
+  background-color: rgba(255, 255, 255, 0.2);
+
+  cursor: pointer;
+
+  transition:
+    background-color var(--transition-default),
+    transform var(--transition-default);
+}
+
+.crew__dot:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+
+  transform: scale(1.1);
+}
+
+.crew__dot.active {
+  background-color: var(--clr-white);
+}
+
+
+
+/* ==================================================
+   IMAGE
+================================================== */
+
+.crew__image {
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: end;
+}
+
+.crew__image::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  bottom: 0;
+
+  width: 100%;
+  height: 8rem;
+
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    rgba(11, 13, 23, 0.95)
+  );
+}
+
+.crew__image img {
+  width: 100%;
+  max-width: 33.75rem;
+
+  object-fit: contain;
+}
+/* ==================================================
+   TABLET
+================================================== */
+
+@media (max-width: 48rem) {
+
+  .crew {
+    padding-bottom: var(--space-800);
+  }
+
+
+
+  /* =========================
+     CONTAINER
+  ========================= */
+
+  .crew__container {
+    padding-top: 2.5rem;
+
+    text-align: center;
+  }
+
+
+
+  /* =========================
+     TITLE
+  ========================= */
+
+  
+.crew__title {
+  font-family: var(--ff-barlow-condensed);
+  font-size: 1.25rem;
+  font-weight: var(--fw-regular);
+  letter-spacing: var(--ls-xl);
+}
+
+
+
+  /* =========================
+     CONTENT
+  ========================= */
+
+  .crew__content {
+    grid-template-columns: 1fr;
+
+    justify-items: center;
+
+    gap: 2.5rem;
+
+    min-height: auto;
+  }
+
+
+
+  /* =========================
+     INFO
+  ========================= */
+
+  .crew__info {
+    align-items: center;
+
+    min-height: auto;
+
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+
+
+  /* =========================
+     ROLE
+  ========================= */
+
+ .crew__role {
+  font-family: var(--ff-bellefair);
+  font-size: 1.5rem;
+  font-weight: var(--fw-regular);
+  line-height: 1.15;
+}
+
+
+  /* =========================
+     NAME
+  ========================= */
+
+.crew__name {
+  font-family: var(--ff-bellefair);
+  font-size: 3rem;
+  font-weight: var(--fw-regular);
+  line-height: 1.15;
+}
+
+
+
+
+
+  /* =========================
+     DESCRIPTION
+  ========================= */
+
+ 
+.crew__description {
+  font-family: var(--ff-barlow);
+  font-size: 1rem;
+  font-weight: var(--fw-regular);
+  line-height: 1.8;
+}
+
+
+
+  /* =========================
+     DOTS
+  ========================= */
+
+  .crew__dots {
+    justify-content: center;
+
+    gap: 2rem;
+  }
+
+
+
+  /* =========================
+     IMAGE
+  ========================= */
+
+  .crew__image {
+    width: 100%;
+
+    justify-content: center;
+  }
+
+  .crew__image::after {
+    height: 10rem;
+  }
+
+  .crew__image img {
+    max-width: 28rem;
+  }
+  
+}
+/* ==================================================
+   MOBILE
+================================================== */
+
+@media (max-width: 35rem) {
+
+  .crew {
+    padding-bottom: var(--space-600);
+  }
+
+
+
+  /* =========================
+     CONTAINER
+  ========================= */
+
+  .crew__container {
+    padding-top: var(--space-500);
+
+    text-align: center;
+  }
+
+
+
+  /* =========================
+     TITLE
+  ========================= */
+
+ 
+.crew__title {
+  font-family: var(--ff-barlow-condensed);
+  font-size: 1rem;
+  font-weight: var(--fw-regular);
+  letter-spacing: var(--ls-md);
+}
+
+
+
+  /* =========================
+     CONTENT
+  ========================= */
+
+  .crew__content {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 0;
+  }
+
+
+
+  /* =========================
+     IMAGE
+  ========================= */
+
+  .crew__image {
+    order: 3;
+
+    width: 100%;
+
+    justify-content: center;
+
+    padding-bottom: var(--space-300);
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  }
+
+  .crew__image::after {
+    height: 5rem;
+  }
+
+  .crew__image img {
+    max-width: 17rem;
+  }
+
+
+
+  /* =========================
+     INFO
+  ========================= */
+
+  .crew__info {
+    order: 1;
+
+    align-items: center;
+
+    width: 100%;
+
+    padding: 0;
+  }
+
+
+
+  /* =========================
+     DOTS
+  ========================= */
+
+  .crew__dots {
+  
+
+    justify-content: center;
+
+    margin-top: var(--space-400);
+    margin-bottom: var(--space-400);
+
+    gap: 1rem;
+  }
+
+  .crew__dot {
+    width: 0.625rem;
+  }
+
+
+
+  /* =========================
+     ROLE
+  ========================= */
+
+  .crew__role {
+  font-family: var(--ff-bellefair);
+  font-size: 1rem;
+  font-weight: var(--fw-regular);
+  line-height: 1.15;
+}
+
+
+
+  /* =========================
+     NAME
+  ========================= */
+.crew__name {
+  font-family: var(--ff-bellefair);
+  font-size: 2rem;
+  font-weight: var(--fw-regular);
+  line-height: 1.15;
+}
+
+
+
+  /* =========================
+     DESCRIPTION
+  ========================= */
+
+ 
+.crew__description {
+  font-family: var(--ff-barlow);
+  font-size: 0.9375rem;
+  font-weight: var(--fw-regular);
+  line-height: 1.8;
+}
+}

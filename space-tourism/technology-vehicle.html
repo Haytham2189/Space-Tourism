@@ -5,28 +5,148 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
-  
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/technology.css">
   <title>Frontend Mentor | Space tourism website</title>
 </head>
-<body>
+<body class="technology-page">
+  <header class="header">
 
-  00 Home
-  01 Destination
-  02 Crew
-  03 Technology
+  <nav class="navbar">
 
-  03 Space launch 101
+    <a href="index.html" class="navbar-logo">
+      <img
+        src="./assets/shared/logo.svg"
+        alt="Space Tourism logo"
+      >
+    </a>
 
-  1
-  2
-  3
+    <button class="mobile-nav-toggle">
 
-  The terminology...
-  Launch vehicle
+      <img
+        src="./assets/shared/icon-hamburger.svg"
+        alt="Open navigation menu"
+      >
 
-  A launch vehicle or carrier rocket is a rocket-propelled vehicle used to carry a 
-  payload from Earth's surface to space, usually to Earth orbit or beyond. Our 
-  WEB-X carrier rocket is the most powerful in operation. Standing 150 metres tall, 
-  it's quite an awe-inspiring sight on the launch pad!
+    </button>
+
+    <div class="navbar-line"></div>
+
+    <div class="navbar-menu">
+
+      <button class="mobile-nav-close">
+
+        <img
+          src="./assets/shared/icon-close.svg"
+          alt="Close navigation menu"
+        >
+
+      </button>
+
+      <ul class="navbar-list">
+
+        <li class="navbar-item">
+          <a href="index.html" class="navbar-link">
+            <span>00</span>
+            Home
+          </a>
+        </li>
+
+        <li class="navbar-item">
+          <a href="destination-moon.html" class="navbar-link">
+            <span>01</span>
+            Destination
+          </a>
+        </li>
+
+        <li class="navbar-item">
+          <a href="crew-commander.html" class="navbar-link">
+            <span>02</span>
+            Crew
+          </a>
+        </li>
+
+        <li class="navbar-item">
+          <a href="technology-vehicle.html" class="navbar-link active">
+            <span>03</span>
+            Technology
+          </a>
+        </li>
+
+      </ul>
+
+    </div>
+
+  </nav>
+
+</header>
+<main class="technology">
+
+  <section class="technology__container">
+
+    <h1 class="technology__title">
+      <span>03</span>
+      Space launch 101
+    </h1>
+
+    <div class="technology__content">
+
+      <nav class="technology__tabs">
+
+        <button class="technology__tab active">
+          1
+        </button>
+
+        <button class="technology__tab">
+          2
+        </button>
+
+        <button class="technology__tab">
+          3
+        </button>
+
+      </nav>
+
+      <article class="technology__info">
+
+        <p class="technology__subtitle">
+          The terminology...
+        </p>
+
+        <h2 class="technology__name">
+          Launch vehicle
+        </h2>
+
+        <p class="technology__description">
+          A launch vehicle or carrier rocket is a rocket-propelled
+          vehicle used to carry a payload from Earth's surface to space,
+          usually to Earth orbit or beyond.
+        </p>
+
+      </article>
+
+      <div class="technology__image">
+
+        <picture>
+
+          <source
+            media="(max-width: 48rem)"
+            srcset="./assets/technology/image-launch-vehicle-landscape.jpg"
+          >
+
+          <img
+            src="./assets/technology/image-launch-vehicle-portrait.jpg"
+            alt="Launch vehicle"
+          >
+
+        </picture>
+
+      </div>
+
+    </div>
+
+  </section>
+
+</main>
 </body>
 </html>
